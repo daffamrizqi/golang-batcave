@@ -1,0 +1,6 @@
+SLICE
+
+slice:
+- Slice adalah reference elemen array
+- Slice bisa dibuat, atau bisa juga dihasilkan dari manipulasi sebuah array ataupun slice lain karena merupakan data REFERENCE
+- Menjadikan perubahan data di semua elemen slice akan berdampak pada slice lain yang memiliki memory address yang sama

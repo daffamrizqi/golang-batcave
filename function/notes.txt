@@ -1,0 +1,17 @@
+Penggunaan fungsi rand.seed():
+- Fungsi ini diperlukan untuk memastikan bahwa angka random yang akan di-generate
+  benar2 acak
+- Kita bisa menggunakan angka apa saja sebagai nilai parameter
+- umumnya diisi dengan time.Now().Unix()
+- fungsi rand.Seed(time.Now().Unix()) berada dalam package math/rand yang harus
+  di import dulu
+
+
+Fungsi Variadic:
+- Pembuatan function dengan parameter sejenis yang tak terbatas
+- maksudnya adalah jumlah parameter yang disisipkan ketika pemanggilan fungsi bisa
+  berapa saja
+- Variadic memiliki sifat yang mirip dengan slice
+- Nilai dari param yang di pass bertipe data sama dan ditampung oleh sebuah
+  variable saja
+- Cara mengakses nya juga dengan menggunaka index

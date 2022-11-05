@@ -1,0 +1,64 @@
+SOURCE: dasarpemrogramangolang.novalagung.com
+
+Kelebihan go:
+- Mendukung konkurensi di level bahasa dengan pengaplikasian cukup mudah
+- Mendukung pemrosesan data dengan BANYAK PROSESOR dalam waktu yang bersamaan (paralel processing)
+- Memiliki garbage collector
+- Proses Compilation sangat cepat
+- Bukan bahasa OOP ataupun hirarkikal, memberikan kebebasan kepada developer cara menulis kode
+- Dependensi dan tooling terbilang lengkap
+- Community support yang bagus
+
+A.22 Variable GOROOT:
+- By default, setelah prosess instalasi go, secara otomatis akan muncul environment variable GOROOT
+- Isi dari variable ini adalah lokasi dimana Go ter install di laptop kita
+- Gunakan command : || go env || untuk melihat informasi konfigurasi environment variable yang ada
+
+
+A.3. Go Modules
+A.3.1 Penjelasan:
+- Go modules adalah MANAJEMEN DEPENDENSI resmi untuk go
+- Modules digunakan untuk menginisialisasi sebuah projek, sekaligus melakukan manajemen thd 3rd party atau lib lain 
+  yang akan dipergunakan
+- Module atau Modules di sini merupakan istilah untuk PROJECT 
+
+A.3.2 Inisialisasi go modules:
+- command: || go mod init <nama-project> ||
+- Biasannya || go mod init <nama-project> || memiliki nama yang sama dengan nama folder projectnya
+- go mod init akan MENGHASILKAN FILE BARU bernama : go.mod
+- File ini digunakan oleh go toolchain untuk menandai bahwa folder dimana file tsb berada adalah folder project. (jadi jangan dihapus)
+  
+
+A.6. Command
+A.6.2 Command go run:
+- Untuk eksekusi file program dengan esktensi .go
+- Command || go run <nama-file> || hanya bisa digunakan untuk file dengan nama package --- main ---
+- Jika ada banyak file yang package-nya main dan file2 tsb berada pada satu level direktori dengan file utama, maka untuk eksekusi, 
+  harus dengan menuliskan semua file sebagai argument command go run 
+
+A.6.3 Command go test:
+- Go meyediakan package testing untuk keperluan unit test 
+- File yang ingin di test haru berakhiran dengan _test.go
+- Command : || go test main_test.go ||
+
+A.6.4 Command go build:
+- Digunakan untuk mengkompilasi file program
+- command || go build || menghasilkan file executeable atau binary pada folder yang sedang aktif
+
+A.6.5 Command go get:
+- Digunakan untuk download package
+- Command go get harus dieksekusi di dalam folder project. Jika dijalankan diluar project maka akan diunduh ke GOPATH
+
+A.6.6 Command go mod tidy:
+- Digunakan untuk memvalidasi dependensi. Jika ada dependensi yang belum ter install, maka akan otomatis ter install
+
+
+A.7
+A.7.5 Keyword package:
+- Setiap file program (.go) harus memiliki package
+- Setiap project harus ada minimal satu file dengan nama package --- main ---
+- File dengan package main akan dieksekusi terlebih dahulu ketika program dijalankan
+
+A.7.7 func main:
+- Dalam sebuah projek harus ada file program yang di dalamnya berisi sebuah fungsi dengan nama main()
+- Fungsi tsb harus berada di file yang package-nya bernama main 
