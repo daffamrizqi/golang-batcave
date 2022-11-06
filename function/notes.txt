@@ -15,3 +15,23 @@ Fungsi Variadic:
 - Nilai dari param yang di pass bertipe data sama dan ditampung oleh sebuah
   variable saja
 - Cara mengakses nya juga dengan menggunaka index
+
+Fungsi Closure:
+- Sebuah fungsi yang bisa disimpan dalam variable.
+- Dengan menerapkan konsep terbatas
+- Kita bisa membuat fungsi di dalam fungsi, atau bahkan membuat fungsi yang mengembalikan fungsi
+- Closure adalah anon function
+- Biasa dimanfaatkan untuk membungkus suatu proses yang hanya dipakai sekali atau dipakai
+  pada blok tertentu saja
+
+Immidiate-Invoked function Expression (IIFE):
+- Closure jenis ini dieksekusi langsung pada saat deklarasinya
+- Biasa digunakan untuk membungkus proses yang hanya dilakukan sekali,
+  bisa return sebuah value, bisa juga tidak
+- Ciri khas IIFE adalah adanya kurung parameter tepat setelah deklarasi closure berakhir
+
+
+Fungsi Sebagi Parameter:
+- Pada g, fungsi bisa dijadikan sebagai tipe data variable.
+- Dari situ sangat memungkinkan untuk menjadikannya sebagai parameter juga
+

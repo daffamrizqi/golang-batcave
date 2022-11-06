@@ -38,6 +38,40 @@ func main() {
 	var numbers = []int{2, 3, 4, 8, 3, 4, 5, 6, 2}
 	avg, totalData, totalScore := calculateAvg(numbers...)
 	fmt.Printf("Total Data: %v\nTotal Score: %v\nAverage: %v\n", totalData, totalScore, avg)
+
+	// function closure:
+	fmt.Println("\nContoh function closure:")
+	getMinMax := func(nums []int) (int, int) {
+		var min, max int
+		for i, x := range nums {
+			switch {
+			case i == 0:
+				max, min = x, x
+			case x > max:
+				max = x
+			case x < min:
+				min = x
+			}
+		}
+		return min, max
+	}
+	min, max := getMinMax(numbers)
+	fmt.Printf("data: %v\nmin: %v\nmax: %v\n", numbers, min, max)
+
+	// immidiate-invoked function expression
+	newNumbers := func(min int) []int {
+		var newArrar []int
+		for _, num := range numbers {
+			if num < min {
+				continue
+			}
+			newArrar = append(newArrar, num)
+		}
+		return newArrar
+	}(3)
+	fmt.Println("\nImidiate-invoked-function expression:")
+	fmt.Println("Original numbers :", numbers)
+	fmt.Println("Filtered numbers :", newNumbers)
 }
 
 func printMessage(message string, fullName []string) {
