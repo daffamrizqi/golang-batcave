@@ -1,0 +1,6 @@
+Struct:
+- Go tidak memiliki class yang ada di bahasa OOP lain yang strict 
+- Tapi go memiliki tie data structur yang bernama struct
+- Struct adalah kumpulan definisi variable (atau property) dan atau function (method),
+  yang dibungkus sebagai tipe data data baru dengan nama tertentu
+- Property dalam struct, tipe datanya bisa bervariasi
